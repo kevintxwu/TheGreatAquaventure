@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Yeseva+One|Merriweather+Sans:300|Merriweather:400italic' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<title> The Great Aquaventure </title>
+<link rel="stylesheet" href='assets/style.css' type='text/css'>
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+<style>
+  .top {
+    background-image: url(assets/top-share.svg);
+  }
+</style>
+</head>
+<body id="main-content">
+  <div class="top" data-sr="ease-in over 2s scale up 0%"></div>
+  <div class="container-fluid section-bee-jupiter" data-sr="wait 1s, ease-in over 2s scale up 0%">
+    <div class="bottom"></div>
+    <div class="container">
+      <!-- <img alt="Bee without stinger" class="beewithoutstinger beesvg" src="images/the-bee-and-jupiter/bee_fill.svg"> -->
+      <hr>
+      <div class="content">
+        <div class="left">
+          <img src="assets/you.svg">
+        </div>
+        <div class="text">
+          We've all heard about the drought in California, but now you're one of the few that actually know what it means, and what we can do about it. It's extremely important and extremely easy for other people to learn the same way that you did! Just share this page, brag a little about how you beat this game, and the impact will only multiply. For every other person that learns what you just did, the effect is real and tangible!
+        </div>
+      </div>
+      <hr>
+      <a href="#" onclick="Share.facebook('thegreataquaventure.herokuapp.com','The Great Aquaventure!','assets/top.svg','I defeated the dreaded Drough-King, Heatwave! But can you?!')">Share on Facebook!</a>
+      <hr>
+      <a href="#" onclick="Share.twitter('thegreataquaventure.herokuapp.com','The Great Aquaventure!')">Share on Twitter!</a>
+      <hr>
+      <a href="home.html">Play again.</a>
+      <hr>
+      <!-- <div class="jupiterbee"> -->
+      <!-- <img alt="Bee with stinger" class="beewithstinger beesvg" src="images/the-bee-and-jupiter/bee_fill_stinger.svg"> -->
+      </div>
+    </div>
+  </div>
+  <script src='assets/noreveal.js'></script>
+  <script>
+    var config = {
+      vFactor: 0.1
+    }
+    window.sr = new scrollReveal(config);
+  </script>
+  <script>
+  Share = {
+  facebook: function(purl, ptitle, pimg, text) {
+  url = 'http://www.facebook.com/sharer.php?s=100';
+  url += '&p[title]=' + encodeURIComponent(ptitle);
+  url += '&p[summary]=' + encodeURIComponent(text);
+  url += '&p[url]=' + encodeURIComponent(purl);
+  url += '&p[images][0]=' + encodeURIComponent(pimg);
+  Share.popup(url);
+  },
+  twitter: function(purl, ptitle) {
+  url = 'http://twitter.com/share?';
+  url += 'text=' + encodeURIComponent(ptitle);
+  url += '&url=' + encodeURIComponent(purl);
+  url += '&counturl=' + encodeURIComponent(purl);
+  Share.popup(url);
+  },
+  popup: function(url) {
+  window.open(url,'','toolbar=0,status=0,width=626, height=436');
+  }
+  };
+  </script>
+</body>
+</html>
