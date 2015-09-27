@@ -69,31 +69,35 @@ a:hover {
 }
 
 @media (max-width: 800px) {
-    .top-title {
-      margin-left: 0;
-      margin-right: 0;
-      padding: 0px;
-      margin-top: -15%;
-      height: 33%;
-      width: 100%;
-      display: block;
-    }
+  .top-title {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0px;
+    margin-top: -15%;
+    height: 33%;
+    width: 100%;
+    display: block;
+  }
 
-    img {
-      box-sizing: border-box;
-      margin-left: 0;
-      margin-right: 0;
-      padding: 0 50px;
-      width: 100%;
-      display: block;
-    }
+  .bucket {
+    display: none;
+  }
 
-    .text {
-      box-sizing: border-box;
-      margin-left: 0;
-      margin-right: 0;
-      padding: 0 50px;
-      width: 100%;
-      display: block;
-    }
+  img {
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 50px;
+    width: 100%;
+    display: block;
+  }
+
+  .text {
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 50px;
+    width: 100%;
+    display: block;
+  }
 }
